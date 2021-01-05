@@ -6,6 +6,10 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const head = function(array){
-  return array[0];
+const tail = function(array) {
+  let newArray = [];
+  for (let i = 1; i < array.length; i++) {
+    newArray.push(array[i]);
+  }
+  return newArray;
 };
