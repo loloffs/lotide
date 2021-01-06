@@ -1,4 +1,4 @@
-const eqArray = function(arr1, arr2) {
+const assertArrayEqual = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
    return '✖Assertion Failed, the arrays are not equal.';
   }
