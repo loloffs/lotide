@@ -12,7 +12,9 @@ const assertArrayEqual = function(arr1, arr2) {
 
 
 
-console.log(eqArray([1, 2, 3], [1, 2, 3])); //should be true
-console.log(eqArray([1, 2, 3], [3, 2, 1])); //should be false
+module.exports = assertArrayEqual;
+
+// console.log(eqArray([1, 2, 3], [1, 2, 3])); //should be true
+// console.log(eqArray([1, 2, 3], [3, 2, 1])); //should be false
 
 
