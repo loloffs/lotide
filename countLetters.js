@@ -25,3 +25,4 @@ console.log(countLetters('hey its me luke'));
 
 console.log(countLetters('this is a test string'));
 
+module.exports = countLetters;

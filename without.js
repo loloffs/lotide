@@ -68,3 +68,6 @@ const itIgnoresInvalidValues = function() {
 itReturnsAnArrayWithoutGivenElements();
 itDoesNotModifyOriginalArray();
 itIgnoresInvalidValues();
+
+
+module.exports = without;

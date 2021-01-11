@@ -38,3 +38,5 @@ const letterPositions = function(sentence) {
 console.log(letterPositions('this is a test'));
 
 console.log(letterPositions('hello'));
+
+module.exports = letterPositions;

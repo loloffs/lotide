@@ -1,3 +1,5 @@
+const eqArrays = require("./eqArrays");
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✔ Assertion Passed: [${actual}] === [${expected}]`);
@@ -62,3 +64,5 @@ console.log(eqObjects(cd, dc)); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 6] };
 console.log(eqObjects(cd, cd2)); // => false
+
+module.exports = eqObjects;

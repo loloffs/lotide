@@ -63,3 +63,5 @@ const testCaseTwo = function() {
 };
 
 testCaseTwo();
+
+module.exports = map;
