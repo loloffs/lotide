@@ -1,4 +1,4 @@
-const assertArrayEqual = function(arr1, arr2) {
+const assertArraysEqual = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
    return '✖Assertion Failed, the arrays are not equal.';
   }
@@ -12,9 +12,4 @@ const assertArrayEqual = function(arr1, arr2) {
 
 
 
-module.exports = assertArrayEqual;
-
-// console.log(eqArray([1, 2, 3], [1, 2, 3])); //should be true
-// console.log(eqArray([1, 2, 3], [3, 2, 1])); //should be false
-
-
+module.exports = assertArraysEqual;
