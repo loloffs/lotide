@@ -1,24 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✔ Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`✖ Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
-
-
-const eqArray = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-   return '✖ Assertion Failed, the arrays are not equal.';
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return '✖ Assertion Failed, the arrays are not equal.';
-    } 
-  }
-  return '✔ Assertion Passed, the arrays are equal.';
-};
-
+const eqArrays = require("./eqArrays");
 
 
 const without = function(source, toRemove) {
@@ -45,14 +25,14 @@ const itReturnsAnArrayWithoutGivenElements = function() {
   let actual = without(source, toRemove);
   let expected = [1, 2, 5];
   //Assertion
-  console.log(eqArray(actual, expected));
+  console.log(eqArrays(actual, expected));
 };
 
 //Test case 2
 const itDoesNotModifyOriginalArray = function() {
   let originalArray = [1, 2, 3, 4, 5];
   without(originalArray, [4, 3]);
-  console.log(eqArray(originalArray, [1, 2, 3, 4, 5]));
+  console.log(eqArrays(originalArray, [1, 2, 3, 4, 5]));
 };
 
 //Test case 3
@@ -61,7 +41,7 @@ const itIgnoresInvalidValues = function() {
   let toRemove = ['Luke', true, NaN, false, 42, 1];
   let actual = without(source, toRemove);
   let expected = [2, 3, 4, 5];
-  console.log(eqArray(actual, expected));
+  console.log(eqArrays(actual, expected));
 };
 
 

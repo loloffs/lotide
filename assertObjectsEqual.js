@@ -1,17 +1,7 @@
-const eqArray = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-   return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    } 
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
 
 
-//This one
+
 const assertObjectsEqual = function(object1, object2) {
   const inspect = require('util').inspect;
   if (Object.keys(object1).length !== Object.keys(object2).length) {
@@ -22,7 +12,7 @@ const assertObjectsEqual = function(object1, object2) {
       if (!Array.isArray(object2[key])) {
         return '✖ Assertion Failed, the objects are not equal.';
       }
-      if (!(eqArray(object1[key], object2[key]))) {
+      if (!(eqArrays(object1[key], object2[key]))) {
         return '✖ Assertion Failed, the objects are not equal.';
       }
       continue;

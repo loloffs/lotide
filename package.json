@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@loloffs/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "lighthouse labs lotide",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/loloffs/lotide.git"
   },
-  "author": "",
+  "author": "Luke Oloffs",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/loloffs/lotide/issues"

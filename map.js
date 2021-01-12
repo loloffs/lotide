@@ -1,33 +1,10 @@
-const eqArray = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-   return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    } 
-  }
-  return true;
-};
+const assertArraysEqual = require("./assertArraysEqual");
 
-
-const assertArrayEqual = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-   return '✖Assertion Failed, the arrays are not equal.';
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return '✖ Assertion Failed, the arrays are not equal.';
-    } 
-  }
-  return '✔ Assertion Passed, the arrays are equal.';
-};
 
 
 const words = ["ground", "control", "to", "major", "tom"];
 
 
-//Map function
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
@@ -47,7 +24,7 @@ const testCaseOne = function() {
   let originalArray = ['Hi', 'my', 'name', 'is', 'Luke'];
   let actual = map(originalArray, word => word[0]);
   let expected = ['H', 'm', 'n', 'i', 'L'];
-  console.log(assertArrayEqual(actual, expected));
+  console.log(assertArraysEqual(actual, expected));
 };
 
 testCaseOne();
@@ -59,7 +36,7 @@ const testCaseTwo = function() {
   let originalArray = ['Hi', 'my', 'name', 'is', 'Luke'];
   let actual = map(originalArray, word => word.length);
   let expected = [2, 2, 4, 2, 4];
-  console.log(assertArrayEqual(actual, expected));
+  console.log(assertArraysEqual(actual, expected));
 };
 
 testCaseTwo();

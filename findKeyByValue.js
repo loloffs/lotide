@@ -1,16 +1,8 @@
 const { builtinModules } = require("module");
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✔ Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`✖Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
+const assertEqual = require("./assertEqual");
 
 
 
-//This one
 const findKeyByValue = function(obj, value) {
   for (const key in obj) {
     if (obj[key] === value) {
